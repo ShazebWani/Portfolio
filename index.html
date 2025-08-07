@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Your Name</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Your Name</span></h1>
+                <p class="hero-subtitle">Software Engineer & AI Enthusiast</p>
+                <p class="hero-description">
+                    Passionate about building innovative solutions that make a difference. 
+                    Specializing in full-stack development and artificial intelligence.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate software engineer with a strong background in full-stack development 
+                        and artificial intelligence. With experience in modern web technologies and machine 
+                        learning frameworks, I love creating solutions that bridge the gap between complex 
+                        technical challenges and user-friendly experiences.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring the latest developments in AI, 
+                        contributing to open-source projects, or sharing knowledge through technical writing 
+                        and mentoring.
+                    </p>
+                    <div class="resume-download">
+                        <a href="resume.pdf" class="btn btn-outline" download>
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Technologies Mastered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <h4>Company Name</h4>
+                        <span class="timeline-date">2023 - Present</span>
+                        <ul>
+                            <li>Developed and maintained full-stack web applications using React, Node.js, and PostgreSQL</li>
+                            <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                            <li>Collaborated with cross-functional teams to deliver features on time</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <h4>Previous Company</h4>
+                        <span class="timeline-date">2022 - 2023</span>
+                        <ul>
+                            <li>Built responsive web interfaces with modern JavaScript frameworks</li>
+                            <li>Optimized application performance resulting in 40% faster load times</li>
+                            <li>Participated in code reviews and maintained high code quality standards</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <h4>Startup Company</h4>
+                        <span class="timeline-date">2021 - 2022</span>
+                        <ul>
+                            <li>Assisted in developing mobile applications using React Native</li>
+                            <li>Created automated testing suites improving code coverage by 30%</li>
+                            <li>Learned agile development methodologies and version control best practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Courses</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-section">
+                <h3>Recent Courses & Certifications</h3>
+                <div class="courses-list">
+                    <div class="course-item">
+                        <h4>Machine Learning Specialization</h4>
+                        <p>Stanford University (Coursera) - 2023</p>
+                    </div>
+                    <div class="course-item">
+                        <h4>AWS Certified Solutions Architect</h4>
+                        <p>Amazon Web Services - 2023</p>
+                    </div>
+                    <div class="course-item">
+                        <h4>Advanced React Patterns</h4>
+                        <p>Frontend Masters - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-tabs">
+                <button class="tab-button active" data-tab="swe">Software Engineering</button>
+                <button class="tab-button" data-tab="ai">AI Projects</button>
+            </div>
+            
+            <!-- SWE Projects -->
+            <div id="swe-projects" class="project-grid active">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/ecommerce" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-ecommerce-demo.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express.js</span>
+                            <span>Socket.io</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/task-manager" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-task-manager.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interactive data visualization dashboard with real-time metrics, customizable charts, and export functionality for business intelligence.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/analytics-dashboard" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-dashboard-demo.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Projects -->
+            <div id="ai-projects" class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot Assistant</h3>
+                        <p>Intelligent chatbot using natural language processing and machine learning to provide customer support and answer queries with high accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenAI API</span>
+                            <span>Flask</span>
+                            <span>NLP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/ai-chatbot" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-chatbot-demo.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Image Recognition System</h3>
+                        <p>Computer vision application that can identify and classify objects in images with 95% accuracy using deep learning and convolutional neural networks.</p>
+                        <div class="project-tech">
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>Python</span>
+                            <span>CNN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/image-recognition" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-vision-demo.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>Machine learning model that predicts market trends and customer behavior using historical data analysis and advanced algorithms.</p>
+                        <div class="project-tech">
+                            <span>PyTorch</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>Jupyter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/predictive-analytics" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://your-analytics-demo.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you want to discuss a potential collaboration or just say hello, 
+                        I'd love to hear from you!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>your.email@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Your City, State</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
