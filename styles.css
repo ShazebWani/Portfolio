@@ -261,21 +261,32 @@ body {
     align-items: center;
 }
 
-.image-placeholder {
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
+/* Profile Picture */
+.profile-image {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 2rem;
 }
 
-.image-placeholder i {
-    font-size: 8rem;
-    opacity: 0.7;
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 
 /* Section Styles */
@@ -519,7 +530,7 @@ section {
 }
 
 .courses-section {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -531,10 +542,31 @@ section {
     color: var(--text-primary);
 }
 
-.courses-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.courses-scroll {
+    display: flex;
+    overflow-x: auto;
     gap: 1.5rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.courses-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.courses-scroll::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+.courses-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.courses-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
 }
 
 .course-item {
@@ -544,10 +576,14 @@ section {
     box-shadow: var(--shadow-md);
     text-align: center;
     transition: transform 0.3s ease;
+    min-width: 280px;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
 }
 
 .course-item:hover {
     transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .course-item h4 {
@@ -555,11 +591,13 @@ section {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 .course-item p {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    margin: 0;
 }
 
 /* Projects Section */
@@ -617,10 +655,19 @@ section {
     align-items: center;
     justify-content: center;
     color: white;
+    overflow: hidden;
+    position: relative;
 }
 
-.project-image i {
-    font-size: 4rem;
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .project-content {
@@ -659,6 +706,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-links a {
@@ -669,6 +717,7 @@ section {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 0;
 }
 
 .project-links a:hover {
@@ -859,8 +908,31 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-links a {
+        padding: 0.75rem 0;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .courses-scroll {
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .course-item {
+        min-width: 250px;
+        padding: 1.25rem;
     }
 
     .section-title {
@@ -892,6 +964,19 @@ section {
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .courses-scroll {
+        gap: 0.75rem;
+    }
+
+    .course-item {
+        min-width: 220px;
+        padding: 1rem;
+    }
+
+    .course-item h4 {
+        font-size: 1rem;
     }
 }
 
@@ -1126,4 +1211,51 @@ section {
     a, button, .btn, .project-card, .skill-tag {
         cursor: none;
     }
+}
+
+/* Georgia Tech Elements */
+.gt-icon {
+    color: #B3A369;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+.gt-mascot {
+    margin-left: 0.5rem;
+    font-size: 1.2em;
+    animation: buzz 2s ease-in-out infinite;
+}
+
+@keyframes buzz {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.gt-course {
+    position: relative;
+    border-left: 4px solid #B3A369;
+}
+
+.gt-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #B3A369, #8B7355);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
