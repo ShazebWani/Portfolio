@@ -83,9 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Simulate form submission (replace with actual form handling)
-            showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
+            // Submit form to API
+            submitContactForm({ name, email, subject, message });
         });
     }
 });
@@ -94,6 +93,44 @@ document.addEventListener('DOMContentLoaded', () => {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Submit contact form to API
+async function submitContactForm(formData) {
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    
+    try {
+        // Show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok && result.success) {
+            showNotification(result.message, 'success');
+            contactForm.reset();
+        } else {
+            showNotification(result.error || 'Something went wrong. Please try again.', 'error');
+        }
+        
+    } catch (error) {
+        console.error('Contact form error:', error);
+        showNotification('Network error. Please check your connection and try again.', 'error');
+    } finally {
+        // Restore button state
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    }
 }
 
 // Notification system
