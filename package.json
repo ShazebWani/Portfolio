@@ -7,8 +7,7 @@
     "resend": "^2.1.0"
   },
   "scripts": {
-    "dev": "python3 -m http.server 8000",
-    "build": "echo 'Static site - no build needed'"
+    "dev": "python3 -m http.server 8000"
   },
   "keywords": ["portfolio", "personal-website", "vercel"],
   "author": "Shazeb Wani",
