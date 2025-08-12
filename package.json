@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website for Shazeb Wani",
   "main": "index.html",
+  "type": "commonjs",
   "dependencies": {
     "resend": "^2.1.0"
   },
