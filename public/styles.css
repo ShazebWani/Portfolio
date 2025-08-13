@@ -261,21 +261,68 @@ body {
     align-items: center;
 }
 
-/* Profile Picture */
+/* Profile Bubbles Container */
+.profile-bubbles-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    margin: 0 auto 2rem;
+}
+
+/* Main Profile Picture */
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto 2rem;
+    z-index: 3;
+    position: relative;
 }
 
 .profile-image:hover {
     transform: scale(1.05);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Side Profile Bubbles */
+.profile-bubble {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    position: relative;
+}
+
+.profile-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+/* Left bubble animation */
+.profile-bubble-left {
+    animation: float-left 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Right bubble animation */
+.profile-bubble-right {
+    animation: float-right 4s ease-in-out infinite 2s;
+    z-index: 1;
+}
+
+/* Main bubble subtle animation */
+.profile-bubble-main {
+    animation: float-main 6s ease-in-out infinite;
 }
 
 .profile-pic {
@@ -287,6 +334,67 @@ body {
 
 .profile-pic:hover {
     transform: scale(1.1);
+}
+
+/* Floating animations */
+@keyframes float-left {
+    0%, 100% {
+        transform: translateY(0px) translateX(-10px);
+    }
+    50% {
+        transform: translateY(-15px) translateX(-5px);
+    }
+}
+
+@keyframes float-right {
+    0%, 100% {
+        transform: translateY(0px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-15px) translateX(5px);
+    }
+}
+
+@keyframes float-main {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-bubbles-container {
+        gap: 20px;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-bubble {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-bubbles-container {
+        gap: 15px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-bubble {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 /* Section Styles */
